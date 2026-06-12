@@ -1,3 +1,10 @@
+import TextInput from "./form/TextInput.tsx";
+import googleIcon from "../assets/google-icon.svg";
+import xIcon from "../assets/x-icon.svg";
+import Divider from "./form/Divider.tsx";
+import SubmitButton from "./buttons/SubmitButton.tsx";
+import SocialButton from "./buttons/SocialButton.tsx";
+
 const RegisterForm = () => {
     return (
         <div className="registerForm">
@@ -5,48 +12,22 @@ const RegisterForm = () => {
             <p className="subTitle">Add meg az e-mail címed és jelszavad a regisztrációhoz!</p>
             <div id="textInputs">
                 <div id="nameRow">
-                    <div className="inputField">
-                        <label htmlFor="lastName">Vezetéknév<span>*</span></label>
-                        <div className="inputFieldBackground">
-                            <input name="lastName" type="text" placeholder="Teszt"/>
-                        </div>
-                    </div>
-                    <div className="inputField">
-                        <label htmlFor="firstName">Keresztnév<span>*</span></label>
-                        <div className="inputFieldBackground">
-                            <input name="firstName" type="text" placeholder="Elek"/>
-                        </div>
-                    </div>
+                    <TextInput type="text" name="lastName" label="Vezetéknév" placeholder="Teszt" required />
+                    <TextInput type="text" name="firstName" label="Keresztnév" placeholder="Elek" required />
                 </div>
-                <div className="inputField">
-                    <label htmlFor="email">Email cím<span>*</span></label>
-                    <div className="inputFieldBackground">
-                        <input name="email" type="email" placeholder="example@mail.com"/>
-                    </div>
-                </div>
-                <div className="inputField">
-                    <label htmlFor="password">Jelszó<span>*</span></label>
-                    <div className="inputFieldBackground">
-                        <input name="password" type="password" placeholder="********"/>
-                    </div>
-                </div>
+                <TextInput type="email" name="email" label="Email cím" placeholder="example@mail.com" required />
+                <TextInput type="password" name="password" label="Jelszó" placeholder="********" required />
             </div>
             <div className="checkField">
                 <input name="accept" type="checkbox" className="checkbox"/>
                 <label htmlFor="accept">Fiók létrehozásával elfogadja a <a href="">Felhasználási feltételeket</a>, és az <a href="">Adatvédelmi irányelveinket</a></label>
             </div>
-            <div id="submitButton" className="inputFieldBackground">
-                <button className="bigButton">Regisztráció</button>
-            </div>
+            <SubmitButton id="submitButton" text="Regisztráció" />
             <p id="hasAccount">Már van fiókja? <a href="">Bejelentkezés</a></p>
-            <div className="orDivider">
-                <div className="line"></div>
-                <div className="text">Vagy</div>
-                <div className="line"></div>
-            </div>
+            <Divider />
             <div id="socialsRow">
-                <button className="socialButton">Google fiókkal</button>
-                <button className="socialButton">X fiókkal</button>
+                <SocialButton image={googleIcon} imageAlt="google icon" text="Google fiókkal" />
+                <SocialButton image={xIcon} imageAlt="x icon" text="X fiókkal" />
             </div>
         </div>
     )

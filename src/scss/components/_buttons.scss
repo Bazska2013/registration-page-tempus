@@ -41,6 +41,11 @@
   font-size: 16px;
   font-weight: 400;
   color: $labelColor;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: $placeholderColor;
@@ -49,5 +54,26 @@
 
   &:active {
     background-color: $checkboxBorderColor;
+  }
+
+  img {
+    height: 20px;
+    width: auto;
+  }
+}
+
+.showPassword {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  color: $textColor;
+
+  .eyeIcon {
+    width: 20px;
+    height: 20px;
   }
 }
