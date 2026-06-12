@@ -1,0 +1,23 @@
+.register {
+  width: 960px;
+  aspect-ratio: 560/390;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 1px solid rgb(227, 231, 235);
+  margin: 250px auto 0;
+}
+
+.registerForm {
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  border-start-start-radius: inherit;
+  border-end-start-radius: inherit;
+}
+
+.registerBackground {
+  background-color: rgb(23, 25, 80);
+  width: 50%;
+  border-start-end-radius: inherit;
+  border-end-end-radius: inherit;
+}
