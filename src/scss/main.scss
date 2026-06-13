@@ -6,7 +6,7 @@
   aspect-ratio: 560/390;
   display: flex;
   flex-direction: row;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid $registerBorderColor;
   margin: 120px auto 0;
 }
@@ -25,6 +25,18 @@
   width: 50%;
   border-start-end-radius: inherit;
   border-end-end-radius: inherit;
+  background-image: url("../assets/grid.svg"), url("../assets/grid.svg");
+  background-position: -150% 42%, right 58%;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  position: relative;
+}
+
+#tempusLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
