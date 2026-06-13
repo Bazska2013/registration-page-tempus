@@ -19,7 +19,7 @@ const RegisterForm = () => {
                 <TextInput type="password" name="password" label="Jelszó" placeholder="********" required />
             </div>
             <div className="checkField">
-                <input name="accept" type="checkbox" className="checkbox"/>
+                <input id="accept" name="accept" type="checkbox" className="checkbox"/>
                 <label htmlFor="accept">Fiók létrehozásával elfogadja a <a href="">Felhasználási feltételeket</a>, és az <a href="">Adatvédelmi irányelveinket</a></label>
             </div>
             <SubmitButton id="submitButton" text="Regisztráció" />

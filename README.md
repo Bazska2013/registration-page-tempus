@@ -7,7 +7,7 @@ This project is a Frontend development task for Tempus Public Foundation. The ta
 
 ## Used technologies
 
-This project is a Vite application built with React and TypeScript. It uses Scss for styling and implementing the responsive design.
+This project is a Vite application built with React and TypeScript. It uses Scss for styling and implementing the responsive design. I used Lucide Icons for the icons.
 
 ### Installation
 
@@ -42,6 +42,31 @@ The listed prompts below were used to generate code snippets with GitHub Copilot
     min-width: 0;  // allow the element to shrink so width:100% children don't force overflow
   }
 }
+```
+- TextInput.tsx, RegisterForm.tsx
+*Where should I add aria-controls and labels?*
+```html
+<input
+  id={name}
+  name={name}
+  type={showPassword ? "text" : type}
+  placeholder={placeholder}
+/>
+
+<button
+  type="button"
+  onClick={() => setShowPassword(!showPassword)}
+  className="showPassword"
+  aria-controls={name}
+  aria-label={showPassword ? "Jelszó elrejtése" : "Jelszó megjelenítése"}
+>
+```
+```html
+<input id={name} name={name} ... />
+```
+```html
+<input id="accept" name="accept" type="checkbox" className="checkbox" />
+<label htmlFor="accept">...</label>
 ```
 
 ### Autocomplete

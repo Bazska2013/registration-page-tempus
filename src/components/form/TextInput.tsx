@@ -16,17 +16,11 @@ const TextInput = ({type, name, label, placeholder = "", required = false}: Text
         <div className="inputField">
             <label htmlFor={name}>{label}{required ? <span>*</span> : <></>}</label>
             <div className="inputFieldBackground">
-                <input name={name} type={showPassword ? "text" : type} placeholder={placeholder}/>
+                <input id={name} name={name} type={showPassword ? "text" : type} placeholder={placeholder}/>
                 {type === "password" &&
-                    (showPassword ? (
-                        <button onClick={() => setShowPassword(!showPassword)} className="showPassword">
-                            <Eye className="eyeIcon" />
-                        </button>
-                    ) : (
-                        <button onClick={() => setShowPassword(!showPassword)} className="showPassword">
-                            <EyeOff className="eyeIcon" />
-                        </button>
-                    ))
+                    <button type="button" aria-controls={name} aria-label={showPassword ? "Jelszó elrejtése" : "Jelszó megjelenítése"} onClick={() => setShowPassword(!showPassword)} className="showPassword">
+                        {showPassword ? <Eye className="eyeIcon" /> : <EyeOff className="eyeIcon" />}
+                    </button>
                 }
             </div>
         </div>
